@@ -1,4 +1,5 @@
 # for data manipulation
+import os
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import make_column_transformer
@@ -26,10 +27,14 @@ mlflow.set_experiment("mlops-training-experiment")
 api = HfApi()
 
 # Load locally prepared train-test data from data-prep step
-Xtrain = pd.read_csv("tourism_project/data/Xtrain.csv")
-Xtest  = pd.read_csv("tourism_project/data/Xtest.csv")
-ytrain = pd.read_csv("tourism_project/data/ytrain.csv")
-ytest  = pd.read_csv("tourism_project/data/ytest.csv")
+DATA_DIR = "tourism_project/data"
+
+print("Files in data directory:", os.listdir(DATA_DIR))
+
+Xtrain = pd.read_csv(os.path.join(DATA_DIR, "Xtrain.csv"))
+Xtest  = pd.read_csv(os.path.join(DATA_DIR, "Xtest.csv"))
+ytrain = pd.read_csv(os.path.join(DATA_DIR, "ytrain.csv"))
+ytest  = pd.read_csv(os.path.join(DATA_DIR, "ytest.csv"))
 
 # Define feature groups
 numeric_features = [

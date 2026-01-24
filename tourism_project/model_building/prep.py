@@ -21,7 +21,7 @@ df.drop(columns=['CustomerID'], inplace=True)
 
 # Encoding the categorical 'Type' column
 label_encoder = LabelEncoder()
-df['TypeofContac'] = label_encoder.fit_transform(df['TypeofContac'])
+df['TypeofContact'] = label_encoder.fit_transform(df['TypeofContact'])
 
 target_col = 'ProdTaken'
 

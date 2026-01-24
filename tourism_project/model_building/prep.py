@@ -34,6 +34,16 @@ Xtrain, Xtest, ytrain, ytest = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
+# Create data directory inside project
+DATA_DIR = "tourism_project/data"
+os.makedirs(DATA_DIR, exist_ok=True)
+
+# Save files in correct folder
+Xtrain_path = os.path.join(DATA_DIR, "Xtrain.csv")
+Xtest_path  = os.path.join(DATA_DIR, "Xtest.csv")
+ytrain_path = os.path.join(DATA_DIR, "ytrain.csv")
+ytest_path  = os.path.join(DATA_DIR, "ytest.csv")
+
 Xtrain.to_csv("Xtrain.csv",index=False)
 Xtest.to_csv("Xtest.csv",index=False)
 ytrain.to_csv("ytrain.csv",index=False)

@@ -25,7 +25,7 @@ api = HfApi()
 Xtrain_path = "hf://datasets/kalrap/M10_AIML_MLOps_Tourism_Project/Xtrain.csv"
 Xtest_path = "hf://datasets/kalrap/M10_AIML_MLOps_Tourism_Project/Xtest.csv"
 ytrain_path = "hf://datasets/kalrap/M10_AIML_MLOps_Tourism_Project/ytrain.csv"
-ytest_path = "hf://kalrap/M10_AIML_MLOps_Tourism_Project/ytest.csv"
+ytest_path = "hf://datasets/kalrap/M10_AIML_MLOps_Tourism_Project/ytest.csv"
 
 Xtrain = pd.read_csv(Xtrain_path)
 Xtest = pd.read_csv(Xtest_path)

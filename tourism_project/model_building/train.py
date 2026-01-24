@@ -26,10 +26,10 @@ mlflow.set_experiment("mlops-training-experiment")
 api = HfApi()
 
 # Load locally prepared train-test data from data-prep step
-Xtrain = pd.read_csv("tourism_project/data/X_train.csv")
-Xtest  = pd.read_csv("tourism_project/data/X_test.csv")
-ytrain = pd.read_csv("tourism_project/data/y_train.csv")
-ytest  = pd.read_csv("tourism_project/data/y_test.csv")
+Xtrain = pd.read_csv("tourism_project/data/Xtrain.csv")
+Xtest  = pd.read_csv("tourism_project/data/Xtest.csv")
+ytrain = pd.read_csv("tourism_project/data/ytrain.csv")
+ytest  = pd.read_csv("tourism_project/data/ytest.csv")
 
 # Define feature groups
 numeric_features = [

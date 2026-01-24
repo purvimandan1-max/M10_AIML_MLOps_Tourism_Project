@@ -7,7 +7,7 @@ import joblib
 # Load model from Hugging Face
 # -------------------------------------------------
 model_path = hf_hub_download(
-    repo_id="kalrap/M10_AIML_MLOps_Tourism_Project",
+    repo_id="kalrap/tourism_failure_model",
     filename="best_tourism_failure_model_v1.joblib"
 )
 model = joblib.load(model_path)

@@ -80,7 +80,7 @@ input_data = pd.DataFrame([{
     "Occupation": occupation,
     "Gender": gender,
     "ProductPitched": product_pitched,
-    "MaritalStatus": marital_status
+    "MaritalStatus": marital_status,
     "Designation": designation
 }])
 

@@ -55,6 +55,10 @@ product_pitched = st.selectbox(
     ["Basic", "Deluxe", "Standard", "Super Deluxe", "King"]
 )
 marital_status = st.selectbox("Marital Status", ["Married", "Single", "Divorced"])
+designation = st.selectbox(
+    "Designation",
+    ["Executive", "Manager", "Senior Manager", "AVP", "VP", "Director"]
+)
 
 # -------------------------------------------------
 # Assemble Input DataFrame
@@ -77,6 +81,7 @@ input_data = pd.DataFrame([{
     "Gender": gender,
     "ProductPitched": product_pitched,
     "MaritalStatus": marital_status
+    "Designation": designation
 }])
 
 # -------------------------------------------------
